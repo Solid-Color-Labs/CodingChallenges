@@ -12,23 +12,23 @@ Example2: x = -123, return -321
 public class Solution7 {
     public int reverse(int x) {
         String s = convertIntToReverseString(x);
-        long l = Long.parseLong(s);
-        if (l > Integer.MAX_VALUE || l < Integer.MIN_VALUE) return 0;
-        return (int) l;
+        try {
+            return Integer.parseInt(s);
+        } catch (NumberFormatException e) {
+            return 0;
+        }
     }
     
     private String convertIntToReverseString(int i) {
-        String reverse = reverseString(String.valueOf(i));
-        char c = reverse.charAt(reverse.length() - 1);
-        if (!Character.isDigit(c)) {
-            reverse = c + reverse.substring(0, reverse.length() - 1);
+        StringBuilder sb = new StringBuilder(String.valueOf(i));
+        if (!Character.isDigit(sb.charAt(0))) {
+            char c = sb.charAt(0);
+            sb = sb.deleteCharAt(0);
+            StringBuilder reverse = sb.reverse();
+            reverse.insert(0, c);
+            return reverse.toString();
         }
-        return reverse;
+        return sb.reverse().toString();
     }
     
-    private String reverseString(String s) {
-        StringBuilder sb = new StringBuilder(s);
-        StringBuilder reverse = sb.reverse();
-        return reverse.toString();
-    }
 }
