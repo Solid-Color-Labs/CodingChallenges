@@ -31,7 +31,7 @@ import java.util.Scanner;
  Sample Output
  
  9
- ---------------------------------------------
+ ----------------------------------------------
  https://www.hackerrank.com/challenges/designer-pdf-viewer
  */
 public class DesignerPdfViewer {
