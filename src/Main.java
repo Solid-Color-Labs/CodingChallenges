@@ -1,13 +1,13 @@
-import leetcode.Solution27;
-import leetcode.Solution28;
-import leetcode.Solution9;
+import leetcode.*;
+
+import java.util.Arrays;
 
 public class Main {
 
     public static void main(String[] args) {
     
-        Solution28 s = new Solution28();
-        int i = s.strStr("abchello", "hello");
+        Solution7 s = new Solution7();
+        int i = s.reverse(1000000003);
         System.out.println(i);
     }
 }
