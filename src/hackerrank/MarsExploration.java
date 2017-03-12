@@ -39,7 +39,7 @@ Sample 0
 Expected signal: SOSSOSSOSSOS
 Recieved signal: SOSSPSSQSSOR
 
-We print the number of changed letters, which is .
+We print the number of changed letters, which is.
 
 Sample 1
 
