@@ -63,6 +63,10 @@ public class QuickSortInPlace {
         for(int i=0;i<s;i++){
             ar[i]=in.nextInt();
         }
+        quickSort(ar);
+    }
+    
+    private static void quickSort(int[] ar) {
         quickSort(ar, 0, ar.length - 1);
     }
     

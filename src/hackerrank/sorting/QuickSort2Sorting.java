@@ -15,8 +15,12 @@ public class QuickSort2Sorting {
         for(int i=0;i<s;i++){
             ar[i]=in.nextInt();
         }
-        quickSort(ar, 0, ar.length - 1);
+        quickSort(ar);
         printArray(ar);
+    }
+    
+    private static void quickSort(int[] ar) {
+        quickSort(ar, 0, ar.length - 1);
     }
     
     private static void quickSort(int arr[], int left, int right) {
