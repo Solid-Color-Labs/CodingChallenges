@@ -1,4 +1,4 @@
-package hackerrank;
+package hackerrank.warmup;
 
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
