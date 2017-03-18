@@ -21,10 +21,12 @@ public class QuickSort2Sorting {
     
     private static void quickSort(int arr[], int left, int right) {
         int index = partition(arr, left, right);
-        if (left < index - 1)
+        if (left < index - 1) {
             quickSort(arr, left, index - 1);
-        if (index < right)
+        }
+        if (index < right) {
             quickSort(arr, index, right);
+        }
     }
     
     private static int partition(int ar[], int left, int right)
@@ -34,10 +36,12 @@ public class QuickSort2Sorting {
         int pivot = ar[(left + right) / 2];
         
         while (i <= j) {
-            while (ar[i] < pivot)
+            while (ar[i] < pivot) {
                 i++;
-            while (ar[j] > pivot)
+            }
+            while (ar[j] > pivot) {
                 j--;
+            }
             if (i <= j) {
                 temp = ar[i];
                 ar[i] = ar[j];
