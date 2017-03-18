@@ -58,9 +58,8 @@ public class FunnyString {
     }
     
     private static boolean isFunny(String s) {
-        StringBuilder r = new StringBuilder(s).reverse();
         for (int i = 1; i < s.length(); i++) {
-            if (Math.abs(s.charAt(i) - s.charAt(i - 1)) != Math.abs(r.charAt(i) - r.charAt(i - 1))) {
+            if (Math.abs(s.charAt(i) - s.charAt(i - 1)) != Math.abs(s.charAt(s.length() - i) - s.charAt(s.length() - i - 1))) {
                 return false;
             }
         }
